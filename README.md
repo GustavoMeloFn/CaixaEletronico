@@ -1,33 +1,25 @@
-# CaixaEletronico
-Projeto focado em melhorias em cima de um código base, de acordo com o solicitado.
+# CaixaEletrônico
 
-Melhorias requisitadas:
+Este projeto é uma melhoria em um código base de um caixa eletrônico virtual. As melhorias foram feitas de acordo com as solicitações recebidas.
 
-Agora é hora de pensar!
-Com o projeto do caixa eletrônico, encontramos algumas questões que são muito importantes, mas não foram aplicadas. Vamos aplicá-las uma a uma. 
+## Melhorias Implementadas:
 
-- Ao acessar o sistema, pergunte o nome do usuário e diga "Olá {Nome} é um prazer ter você por aqui!".
+- **Saudação Personalizada**: Ao acessar o sistema, o nome do usuário é solicitado e uma mensagem de boas-vindas personalizada é exibida.
 
-- Na função "inicio", utilize escolha/caso (switch/case) para validar a opção escolhida pelo usuário. 
+- **Validação de Opções**: Na função "início", foi implementada a estrutura de controle switch/case para validar a opção escolhida pelo usuário.
 
-- Sempre que o usuário for sacar dinheiro, o valor restante não pode ser negativo, ou seja, caso o usuário tente sacar mais do que tem em saldo, a ação não deve ocorrer. Exiba uma mensagem de "Operação não autorizada". 
+- **Verificação de Saldo**: Antes de realizar um saque, o sistema verifica se o saldo é suficiente. Se o valor do saque for maior que o saldo disponível ou menor ou igual a zero, a operação é cancelada e uma mensagem de "Operação não autorizada" é exibida.
 
-- Sempre que o usuário for sacar dinheiro, o valor a ser sacado não pode ser igual ou menor que zero. Exiba uma mensagem de "Operação não autorizada". 
+- **Extrato**: Foi adicionada a opção para visualizar o extrato, que inclui algumas transações fictícias.
 
-- Adicionar a opção para ver o extrato (Coloque algumas compras ou depósitos fictícios). 
+- **Transferência**: Foi adicionada a opção para realizar transferências. O usuário deve informar o número da conta para a qual deseja transferir e o valor da transferência. O valor é então debitado do saldo da mesma forma que no saque. Se o valor da transferência for maior que o saldo disponível ou menor ou igual a zero, a operação é cancelada e uma mensagem de "Operação não autorizada" é exibida.
 
-- Adicionar a opção para fazer uma transferência. A transferência consiste em você informar o número de uma conta (pode ser qualquer número, mas obrigatoriamente um número, ou seja, nenhum outro caractere deve ser aceito), perguntar o valor da transferência e remover o valor da conta da mesma forma como na ação do saldo. Caso o usuário tente transferir mais do que tem em saldo, a ação não deve ocorrer. Exiba uma mensagem de "Operação não autorizada". 
+- **Menu Principal**: As opções do menu principal foram reordenadas para: Saldo, Extrato, Saque, Depósito, Transferência e Sair.
 
-- Sempre que o usuário for transferir dinheiro,  o valor a ser transferido não pode ser igual ou menor que zero, ou seja, caso o usuário tente transferir mais do que tem em saldo, a ação não deve ocorrer. Exiba uma mensagem de "Operação não autorizada". 
+- **Função de Erro**: A função "erro" foi atualizada para lidar com as novas opções do menu.
 
-- No menu principal, a ordem das opções deve ser: Saldo, Extrato, Saque, Depósito, Transferência e Sair. 
+- **Depósito**: Se o valor do depósito for menor ou igual a zero, a operação é cancelada e uma mensagem de "Operação não autorizada" é exibida.
 
-- Atualize a função "erro" com as novas opções do menu.
+- **Senha**: Para acessar o saldo, sacar, retirar o extrato ou transferir dinheiro, o usuário deve informar uma senha. A senha é validada através de uma condicional. A senha correta é 3589. Se a senha informada não for a correta, a função atual é chamada novamente.
 
-- Caso o usuário informe um valor para depósito igual ou menor que zero, não deixe a operação ocorrer. Exiba uma mensagem de "Operação não autorizada". 
-
-- Sempre que o usuário for acessar o saldo, sacar, retirar o extrato ou transferir dinheiro é necessário que ele informe uma senha. Essa senha deve ser validada com uma condicional. A senha é 3589.
-
-- Caso a senha informada não seja a correta, é necessário chamar a função atual novamente. 
-
-- Quando o usuário escolher sair do sistema, exiba uma mensagem agradecendo por utilizar os serviços do banco: "{Nome}, foi um prazer ter você por aqui!".
+- **Sair**: Quando o usuário escolhe sair do sistema, uma mensagem de agradecimento é exibida: "{Nome}, foi um prazer ter você por aqui!".
